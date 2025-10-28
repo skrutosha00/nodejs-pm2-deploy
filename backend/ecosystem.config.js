@@ -52,7 +52,7 @@ module.exports = {
       repo: 'git@github.com:skrutosha00/nodejs-pm2-deploy.git',
       path: DEPLOY_PATH,
 
-      'pre-deploy-local': 'scp ./backend/.env $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/shared/.env',
+      'pre-deploy-local': 'scp ./.env $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/shared/.env',
 
       // PM2 runs post-deploy inside $DEPLOY_PATH/current
       'post-deploy': [
