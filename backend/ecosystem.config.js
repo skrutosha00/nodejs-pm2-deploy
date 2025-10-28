@@ -65,6 +65,8 @@ module.exports = {
         // 4) (optional) build frontend — но лучше делать это в CI.
         'cd ../frontend && NODE_OPTIONS=--openssl-legacy-provider npm run build',
 
+        'cd ../backend',
+
         // 5) never use `pm2 kill` here; reload from ecosystem and refresh env
         'pm2 startOrReload ecosystem.config.js --env production --update-env',
       ].join(' && '),
