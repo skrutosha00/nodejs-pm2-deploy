@@ -8,7 +8,7 @@ module.exports = {
   apps: [
     {
       name: 'api',
-      // cwd: './backend',
+      cwd: './backend',
       script: 'dist/app.js',
       env: { NODE_ENV: 'production' },
       instances: 1,
