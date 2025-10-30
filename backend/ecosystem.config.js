@@ -10,7 +10,7 @@ module.exports = {
       name: 'api',
       cwd: './backend',
       script: 'dist/app.js',
-      env: { NODE_ENV: 'production' },
+      env: { NODE_ENV: 'production', DB_ADDRESS: process.env.DB_ADDRESS },
       instances: 1,
       watch: false,
       autorestart: true,
