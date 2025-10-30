@@ -10,7 +10,7 @@ module.exports = {
       name: 'api',
       cwd: './backend',
       script: 'dist/app.js',
-      env: { NODE_ENV: 'production', DB_ADDRESS: process.env.DB_ADDRESS },
+      env: { NODE_ENV: 'production' },
       instances: 1,
       watch: false,
       autorestart: true,
@@ -29,7 +29,7 @@ module.exports = {
       'pre-deploy-local': 'scp ./.env $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/shared/.env',
 
       'post-deploy': [
-        'ln -sf ../shared/.env backend/.env',
+        'ln -sfn ../../shared/.env backend/.env',
 
         'cd backend && npm run build',
 
